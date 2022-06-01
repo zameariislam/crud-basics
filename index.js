@@ -42,9 +42,18 @@ let createPost = (data) => {
     <p>${data}</p>
     <span class="option">
         <i class="fa-solid fa-pen-to-square"></i>
-        <i class="fa-solid fa-trash-can"></i>
+        <i onClick='deletePost(this)' class="fa-solid fa-trash-can"></i>
     </span>
 </div>`
+}
+
+let deletePost = (m) => {
+    let element = m
+    let parent = element.parentNode.parentNode;
+    parent.remove()
+
+
+
 }
 
 
